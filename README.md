@@ -1,6 +1,6 @@
 # RAG-based Chatbot with FastAPI, Pinecone, and Groq
 
-This project is a Retrieval-Augmented Generation (RAG) based chatbot that allows users to ask questions about a PDF book (e.g., a pharmacology textbook). The chatbot uses Pinecone for vector storage, Groq for language model inference, and FastAPI for the backend. The frontend is built with HTML, CSS, and JavaScript.
+This project is a Retrieval-Augmented Generation (RAG) based chatbot that allows users to ask questions about a PDF book (e.g., a basic & pharmacology textbook 12th Edition). The chatbot uses Pinecone for vector storage, Groq for language model inference, and FastAPI for the backend. The frontend is built with HTML, CSS, and JavaScript.
 
 ## Table of Contents
 - [Features](#features)
@@ -75,8 +75,6 @@ http://localhost:8001
 ```
 
 ## Usage
-### Load a PDF Book:
-Place your PDF book in the `backend` directory and update the path variable in `backend/main.py`.
 
 ### Ask Questions:
 1. Open the frontend in your browser.
@@ -100,15 +98,6 @@ Place your PDF book in the `backend` directory and update the path variable in `
 ```json
 {
   "answer": "Aspirin works by inhibiting the enzyme cyclooxygenase (COX)...",
-  "metadata": [
-    {
-      "page_content": "...",
-      "page_number": 123,
-      "chapter": "Chapter 5",
-      "section": "Section 3.2",
-      "table": "N/A"
-    }
-  ]
 }
 ```
 
@@ -123,6 +112,18 @@ The frontend is a simple web interface built with HTML, CSS, and JavaScript. It 
 - **Loading Spinner**: Displays a spinner while waiting for the backend response.
 - **Clear Previous Answer**: Automatically clears the previous answer when a new question is asked.
 
+# Screenshots
+
+### Chatbot Interface
+![Chatbot Interface](images//Frontend.png)
+*Figure 1: The chatbot interface where users can ask questions.*
+
+![Waiting Time](images/Frontend_1.png)
+*Figure 2: The waiting cursor for until the response come from LLM*
+
+![Response of RAG System](images/Frontend_2.png)
+*Figure 3: The final answer that come from LLM*
+
 ## Contributing
 Contributions are welcome! If you'd like to contribute, please follow these steps:
 1. Fork the repository.
@@ -130,8 +131,6 @@ Contributions are welcome! If you'd like to contribute, please follow these step
 3. Commit your changes.
 4. Submit a pull request.
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 - **FastAPI** for the backend framework.
